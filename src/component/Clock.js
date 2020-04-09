@@ -7,7 +7,8 @@ constructor() {
     super()
 
     this.state = {
-         date :new Date()
+         date :new Date(),
+         Month: new Date().toLocaleString('default', { month: 'long' })
     };
     
 }
@@ -41,7 +42,7 @@ render() {
             <div>
                 <h1>{this.state.date.toLocaleTimeString()}</h1>
                 <h1>{this.state.date.toTimeString()}</h1>
-               
+                <h1>{this.state.date.getDay()}-{this.state.Month}-{this.state.date.getFullYear()}</h1>
             </div>
         )
     }
